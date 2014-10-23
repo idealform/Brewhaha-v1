@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Add Brewlog</h1>
+
+    <form method="POST" action=''>{% csrf_token %}
+       {{ form.as_p }}
+       <button class="btn btn-primary" type="submit">Save</button>
+    </form>
+    
+    <p><a href="{% url 'brewlog_list' %}" >Cancel</a></p>
+    
+</div>
+
+{% endblock %}
